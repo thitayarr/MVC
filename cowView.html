@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cow Strike</title>
+    <style>
+        #cowInfo, #lemonButton { display: none; }
+        #resetButton { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Cow strike</h1>
+        
+    <div id="inputForm">
+        <label for="cowID">Enter Cow ID :</label><br>
+        <input type="text" id="cowID" maxlength="8"><br><br>
+        <button onclick="checkCow()">Submit</button>
+    </div>
+
+    <div id="cowInfo">
+        <p id="cowDetails"></p>
+        <button onclick="cow.milkCow()">Milk Cow</button>
+        <button id="lemonButton" onclick="milkLemon()">Milk with Lemon</button>
+        <button id="resetButton" onclick="resetCow()">Reset Cow</button>
+        <p id="milkMessage"></p>
+        <p id="totalMilk"></p>
+        <button onclick="backToInput()">Back</button>
+    </div>
+
+    <script src="cowController.js"></script>
+    <script src="cowModel.js"></script>
+
+    </body>
+</html>
